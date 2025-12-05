@@ -57,14 +57,13 @@ export default function ServicesPage() {
                     ))}
                   </div>
                   
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
+                  <a
+                    href={`tel:${BRAND.phone}`}
+                    className="inline-flex items-center justify-center w-full bg-accent-600 hover:bg-accent-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     <Phone size={16} className="mr-2" />
                     Get Quote
-                  </Button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -155,15 +154,13 @@ export default function ServicesPage() {
             Let's discuss your interior design needs and create a space that exceeds your expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="primary"
-              size="lg"
-              className="bg-white text-accent-600 hover:bg-accent-50"
-              onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
+            <a
+              href={`tel:${BRAND.phone}`}
+              className="inline-flex items-center justify-center bg-white text-accent-600 hover:bg-accent-50 px-8 py-4 text-lg rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Phone size={20} className="mr-2" />
               Call Now
-            </Button>
+            </a>
             <Link href="/contact">
               <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-accent-600">
                 Get Free Consultation

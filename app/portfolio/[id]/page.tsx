@@ -163,13 +163,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <h4 className="font-semibold text-neutral-900 mb-4">
                     Interested in a Similar Project?
                   </h4>
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
+                  <a
+                    href={`tel:${BRAND.phone}`}
+                    className="inline-flex items-center justify-center w-full bg-accent-600 hover:bg-accent-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     Get Free Consultation
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>

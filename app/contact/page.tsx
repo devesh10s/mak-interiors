@@ -24,9 +24,9 @@ export default function ContactPage() {
 
           {/* Quick Contact Options */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <button
-              onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
-              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+            <a
+              href={`tel:${BRAND.phone}`}
+              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center block"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-100 rounded-full mb-4 group-hover:bg-accent-500 transition-colors duration-300">
                 <Phone className="w-8 h-8 text-accent-600 group-hover:text-white transition-colors duration-300" />
@@ -34,11 +34,13 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Call Us Now</h3>
               <p className="text-neutral-600 mb-3">Speak directly with our design experts</p>
               <p className="text-accent-600 font-medium">{formatPhoneNumber(BRAND.phone)}</p>
-            </button>
+            </a>
 
-            <button
-              onClick={() => window.open(generateWhatsAppLink(BRAND.phone, whatsappMessage), '_blank')}
-              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+            <a
+              href={generateWhatsAppLink(BRAND.phone, whatsappMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center block"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 group-hover:bg-green-500 transition-colors duration-300">
                 <MessageCircle className="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300" />
@@ -46,11 +48,11 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
               <p className="text-neutral-600 mb-3">Quick chat for instant responses</p>
               <p className="text-green-600 font-medium">Message Us</p>
-            </button>
+            </a>
 
-            <button
-              onClick={() => window.open(`mailto:${BRAND.email}`, '_self')}
-              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+            <a
+              href={`mailto:${BRAND.email}`}
+              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center block"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-500 transition-colors duration-300">
                 <Mail className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
@@ -58,7 +60,7 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Email Us</h3>
               <p className="text-neutral-600 mb-3">Send detailed project requirements</p>
               <p className="text-blue-600 font-medium">{BRAND.email}</p>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -143,14 +145,15 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8">
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    onClick={() => window.open(generateWhatsAppLink(BRAND.phone, whatsappMessage), '_blank')}
+                  <a
+                    href={generateWhatsAppLink(BRAND.phone, whatsappMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full bg-accent-600 hover:bg-accent-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     <MessageCircle size={16} className="mr-2" />
                     Quick WhatsApp Chat
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>

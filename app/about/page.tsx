@@ -195,18 +195,18 @@ export default function AboutPage() {
             Let's work together to create a space that truly reflects your vision and lifestyle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
+            <a
+              href={`tel:${BRAND.phone}`}
               className="btn-primary bg-white text-accent-600 hover:bg-accent-50"
             >
               Get Started Today
-            </button>
-            <button
-              onClick={() => window.open(`mailto:${BRAND.email}`, '_self')}
+            </a>
+            <a
+              href={`mailto:${BRAND.email}`}
               className="btn-secondary border-white text-white hover:bg-white hover:text-accent-600"
             >
               Send us an Email
-            </button>
+            </a>
           </div>
         </div>
       </section>

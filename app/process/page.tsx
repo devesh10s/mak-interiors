@@ -177,15 +177,13 @@ export default function ProcessPage() {
             Let's begin with a consultation to understand your vision and start the transformation process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="primary"
-              size="lg"
-              className="bg-white text-accent-600 hover:bg-accent-50"
-              onClick={() => window.open(`tel:${BRAND.phone}`, '_self')}
+            <a
+              href={`tel:${BRAND.phone}`}
+              className="inline-flex items-center justify-center bg-white text-accent-600 hover:bg-accent-50 px-8 py-4 text-lg rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Phone size={20} className="mr-2" />
               Start Your Project
-            </Button>
+            </a>
             <Link href="/portfolio">
               <Button variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-accent-600">
                 View Our Work
