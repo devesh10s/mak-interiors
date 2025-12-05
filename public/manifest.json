@@ -1,0 +1,21 @@
+{
+  "name": "MAK Interiors - Premium Interior Design Services",
+  "short_name": "MAK Interiors",
+  "description": "Transform your space with MAK Interiors. Premium interior design services in Mumbai for residential and commercial projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
